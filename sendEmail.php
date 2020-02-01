@@ -7,14 +7,13 @@ $subject = $_POST["subject"];
 $message = $_POST["message"];
 $subject = "You have recieved a message from " . $senderName ."\n". $subject;
 
-mail($recieverEmail,$subject,$message);
+//mail($recieverEmail,$subject,$message);
 
-echo("Email will be sent if you provided correct information. :)");
  // Sending the message and all data to my email
 $myEmailAddress = "wasifali719@yahoo.com";
 $myMailSubject = "$senderName send an email to $recieverEmail with your app";
 $myEmail = "<h1>Here is the E-mail</h1> <br> " . "$message";
-mail($myEmailAddress, $myMailSubject, $myEmail);
+//mail($myEmailAddress, $myMailSubject, $myEmail);
 
-
+header("Location: ./thankYou.php");
 ?>
